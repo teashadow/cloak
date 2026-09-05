@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cloak"
+version = "0.1.0"
+description = "MAD identity-layer OPSEC checker"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "click>=8.0",
+  "rich>=13.0",
+  "requests>=2.31",
+  "python-dotenv>=1.0",
+  "PyYAML>=6.0",
+]
+
+[project.scripts]
+cloak = "cloak_app.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
